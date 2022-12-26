@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+.main-section{
+  padding: 2em;
+
+  &--biodata{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & > *{
+      flex: 1 1 0;
+    }
+  }
+
+  .biodata__gambar img{
+    max-height: 600px;
+    border-radius: .5em;
+    margin: auto;
+    outline: 2px solid #222;
+    // border-radius: 25%;
+    transition: transform $transisi-cepat, box-shadow $transisi-cepat;
+    
+    &:hover{
+      transform: scale(1.02);
+      box-shadow: 2px 2px 20px -5px #444;
+    }
+  }
+
+  .biodata__teks{
+    padding: 1em;
+    height: min-content;
+  }
+}
+
+.tentang {
+  background-color: darkslategrey;
+  // font-family: "Roboto Condensed";
+}
+
+footer{
+  background: #222;
+  color: $font-putih;
+  padding: 2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__link-sosmed{
+  display: flex;
+  font-size: 1.5rem;
+  
+  a{
+    color: $font-putih-gelap;
+    padding: .2em .5em;
+    transition: color $transisi-cepat;
+
+    &:hover{
+      color: $font-putih-terang;
+    }
+  }
+}
+
+@media screen and (min-width: 50em){
+  .main-section{
+    min-height: 100vh;
+
+    &--biodata{
+      flex-direction: row;
+    }
+  }
+
+  .biodata__gambar img{ max-height: 500px}
+}

@@ -1,0 +1,118 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+nav {
+  background-color: rgba(53, 53, 53, 0.8);
+  backdrop-filter: blur(1rem);
+  padding-inline: 1em;
+  color: #ddd;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+}
+nav a::after {
+  content: "";
+  background: #ff004f;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 700ms ease;
+  position: absolute;
+  left: 0;
+  bottom: -0.5em;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.main-section {
+  padding: 2em;
+}
+.main-section--biodata {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-section--biodata > * {
+  flex: 1 1 0;
+}
+.main-section .biodata__gambar img {
+  max-height: 600px;
+  border-radius: 0.5em;
+  margin: auto;
+  outline: 2px solid #222;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.main-section .biodata__gambar img:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 20px -5px #444;
+}
+.main-section .biodata__teks {
+  padding: 1em;
+  height: min-content;
+}
+
+.tentang {
+  background-color: darkslategrey;
+}
+
+footer {
+  background: #222;
+  color: #ddd;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__link-sosmed {
+  display: flex;
+  font-size: 1.5rem;
+}
+.footer__link-sosmed a {
+  color: #bbb;
+  padding: 0.2em 0.5em;
+  transition: color 200ms ease;
+}
+.footer__link-sosmed a:hover {
+  color: #fefefe;
+}
+
+@media screen and (min-width: 50em) {
+  .main-section {
+    min-height: 100vh;
+  }
+  .main-section--biodata {
+    flex-direction: row;
+  }
+  .biodata__gambar img {
+    max-height: 500px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

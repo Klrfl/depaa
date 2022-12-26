@@ -1,0 +1,12 @@
+{
+  "name": "depaa",
+  "version": "1.0.0",
+  "description": "Portofolio Devano yang sudah diacak-acak",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch scss:css"
+  },
+  "author": "Efraim",
+  "license": "MIT"
+}
